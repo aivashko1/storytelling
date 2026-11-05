@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Art of Storytelling</title>
+<meta name="description" content="A short guide to why stories matter and how to tell them well.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf6ef;
+    --surface: #ffffff;
+    --ink: #2a241d;
+    --muted: #6b6157;
+    --accent: #b4532a;
+    --line: #e7dfd3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1a1714;
+      --surface: #242019;
+      --ink: #efe8dd;
+      --muted: #a89e91;
+      --accent: #e08a5f;
+      --line: #3a342c;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.65 Inter, system-ui, sans-serif;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 600; line-height: 1.2; }
+  header { padding: 96px 0 64px; border-bottom: 1px solid var(--line); }
+  .eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: .12em; font-size: 13px; font-weight: 500; }
+  header h1 { font-size: clamp(40px, 8vw, 64px); margin: 12px 0 20px; }
+  header p { font-size: 20px; color: var(--muted); max-width: 34em; margin: 0; }
+  section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+  section h2 { font-size: 30px; margin: 0 0 16px; }
+  blockquote {
+    margin: 28px 0 0; padding: 4px 0 4px 20px;
+    border-left: 3px solid var(--accent);
+    font-family: Fraunces, Georgia, serif; font-size: 22px; font-style: italic;
+  }
+  blockquote cite { display: block; margin-top: 8px; font: 14px Inter, sans-serif; font-style: normal; color: var(--muted); }
+  .arc { list-style: none; padding: 0; margin: 24px 0 0; counter-reset: step; }
+  .arc li {
+    counter-increment: step; position: relative;
+    padding: 0 0 22px 52px;
+  }
+  .arc li::before {
+    content: counter(step); position: absolute; left: 0; top: 0;
+    width: 34px; height: 34px; border-radius: 50%;
+    background: var(--accent); color: var(--bg);
+    display: grid; place-items: center; font-weight: 500; font-size: 15px;
+  }
+  .arc strong { display: block; }
+  .arc span { color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-top: 24px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 19px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  footer { padding: 40px 0 64px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="eyebrow">A short guide</div>
+      <h1>The Art of Storytelling</h1>
+      <p>Long before writing, people sat around fires and told each other stories. We still do. Here is why they work, and how to tell one well.</p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <h2>Why stories matter</h2>
+        <p>Facts tell us what happened. Stories tell us what it meant. A good story lets a listener live through someone else's experience for a few minutes, and people tend to remember what they have felt far longer than what they have been told.</p>
+        <p>Stories pass on values, explain the world, build trust between strangers, and make a case without sounding like an argument. Teachers, leaders, marketers and parents all lean on them for the same reason.</p>
+        <blockquote>
+          "There is no greater agony than bearing an untold story inside you."
+          <cite>Maya Angelou</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>The shape of a story</h2>
+        <p>Most stories, from fairy tales to films, follow a familiar arc:</p>
+        <ol class="arc">
+          <li><strong>The setup</strong><span>Introduce a character and their ordinary world.</span></li>
+          <li><strong>The disruption</strong><span>Something changes. A want, a problem, a door opens.</span></li>
+          <li><strong>The struggle</strong><span>Obstacles rise. Each attempt costs something.</span></li>
+          <li><strong>The turning point</strong><span>A choice or discovery that changes everything.</span></li>
+          <li><strong>The resolution</strong><span>A new normal, and a character who is different for the journey.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Tips for telling it well</h2>
+        <div class="grid">
+          <div class="card"><h3>Start late</h3><p>Open as close to the action as you can. Skip the warm-up.</p></div>
+          <div class="card"><h3>Show, don't tell</h3><p>"Her hands shook" beats "she was nervous."</p></div>
+          <div class="card"><h3>Make them care</h3><p>Give your character a clear want and something at stake.</p></div>
+          <div class="card"><h3>Use specifics</h3><p>One vivid detail is worth a paragraph of general description.</p></div>
+          <div class="card"><h3>Build tension</h3><p>Hold back answers. Curiosity keeps people listening.</p></div>
+          <div class="card"><h3>Know your ending</h3><p>Decide where you're going before you start, then cut what doesn't lead there.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Try it yourself</h2>
+        <p>Think of a moment when something didn't go as planned. Tell it in under a minute: who you were, what you wanted, what went wrong, and what you learned. That's a story.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Every story starts with someone willing to tell it.</div>
+  </footer>
+</body>
+</html>
